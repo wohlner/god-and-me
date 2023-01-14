@@ -27,16 +27,16 @@ function draw() {
   vidHeight = (width * capture.height / capture.width)/ratio;
     
  //live video capture in center of window - no flip
- image(capture, 0,0, vidWidth, vidHeight);
+ image(capture, 0,-vidHeight/2, vidWidth, vidHeight);
  
  //make the live video blue in center of window - no flip
- //fill(4, 55, 112,255*2/3)
- //noStroke();
- //rect(0-vidWidth/2, 0 - vidHeight/2, vidWidth,  vidHeight);
+ fill(4, 55, 112,255*2/3)
+ noStroke();
+ //rect(-vidWidth/2, -vidHeight, vidWidth, vidHeight);
  
   //code for a flipping plane
   push();
-  translate(0, vidHeight/2, 0);
+  translate(0, 0, 0);
   rotateZ(frameCount * 0);
   rotateX(frameCount * -flipVelocity);
   rotateY(frameCount * 0);
