@@ -1,2 +1,9 @@
 # god-and-me
-Code for my Internet art piece, _God and me_. This is a work in progress and not a complete piece yet. 
+This repo houses code for my Internet art piece, _God and me_, which is a work in progress and not a complete art piece yet. 
+
+I am building _God and me_ with [p5.js](https://p5js.org/).
+
+Thanks,
+Jen 
+
+[jenwohlner.com](https://jenwohlner.com/)
