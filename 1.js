@@ -1,11 +1,9 @@
-//based on https://p5js.org/examples/3d-geometries.html
-
 let capture;
 let vidWidth;
 let vidHeight;
 let fr = 30; // the framerate
-let flipVelocity = 1/30; //speed and direction of rotation on x axis
-let opacity = 0;
+let flipVelocity = 1/29; //speed and direction of rotation on x axis
+let opacity = 0; //DO NOT CHANGE. starting opacity of blue vertical rectangle
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -24,14 +22,14 @@ function windowResized() {
 
 function draw() {
   background(255, 246, 230);
-  ratio = 5; // video height ratio to screen width
+  ratio = 7; // video height ratio to screen width
   vidWidth = (height * capture.width / capture.height)/ratio;
   vidHeight = height/ratio;
     
   //live video capture in center of window 
   image(capture, 0,0, vidWidth, vidHeight);
  
-  //code first video up and down
+  //code first flipping video up and down
   if (frameCount > 0  && frameCount < 90) {
     //up 
     push();
@@ -103,12 +101,49 @@ function draw() {
     image(capture, 0, -vidHeight/2, vidWidth, vidHeight);
     pop();
   }
+  
+  //code third flipping video up and down
+  if (frameCount >= 180  && frameCount < 270) {
+    //up
+    push();
+    translate(0, -2.5*vidHeight, 0);
+    rotateX(frameCount * -flipVelocity);
+    scale(1, -1);
+    image(capture, 0, -vidHeight/2, vidWidth, -vidHeight);
+    pop();
+    
+    //down
+    push();
+    translate(0, 2.5*vidHeight, 0);
+    rotateX(frameCount * -flipVelocity);
+    scale(1, -1);
+    image(capture, 0, vidHeight/2, vidWidth, -vidHeight);
+    pop();
+  }
+  
+  //code third video up and down
+  if (frameCount >= 270) {
+    //up
+    push();
+    translate(0, -2.5*vidHeight, 0);
+    scale(1, -1);
+    image(capture, 0, vidHeight/2, vidWidth, vidHeight);
+    pop();
+    
+    //down
+    push();
+    translate(0, 2.5*vidHeight, 0);
+    scale(1, -1);
+    image(capture, 0, -vidHeight/2, vidWidth, vidHeight);
+    pop();
+  }
+  
   //fade in blue rectangle
-  if(frameCount >= 180){
+  if(frameCount > 270){
     noStroke();
     fill(4, 55, 112, opacity);
-        if(opacity >= 127.5) opacity = 127.5;
-        else opacity = opacity + 225/fr;
+        if(opacity >= 255 * .8) opacity = 255 * .8;
+        else opacity = opacity + (255)/fr;
     rectMode(CENTER);
     rect(0, 0, vidWidth, height)
   }
