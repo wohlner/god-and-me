@@ -29,7 +29,7 @@ function draw() {
   //live video capture in center of window 
   image(capture, 0,0, vidWidth, vidHeight);
  
-  //code first flipping video up and down
+  //code for first flipping video up and down
   if (frameCount > 0  && frameCount < 90) {
     //up 
     push();
@@ -66,7 +66,7 @@ function draw() {
   
   }
 
-  //code second flipping video up and down
+  //code for second flipping video up and down
   if (frameCount > 90  && frameCount < 180) {
     //up
     push();
@@ -85,7 +85,7 @@ function draw() {
     pop();
   }
   
-  //code second video up and down
+  //code for still video after second 180 flip
   if (frameCount >= 180) {
     //up
     push();
@@ -102,7 +102,7 @@ function draw() {
     pop();
   }
   
-  //code third flipping video up and down
+  //code for third flipping video up and down
   if (frameCount >= 180  && frameCount < 270) {
     //up
     push();
@@ -121,7 +121,7 @@ function draw() {
     pop();
   }
   
-  //code third video up and down
+  //code for still video after third 180 flip
   if (frameCount >= 270) {
     //up
     push();
