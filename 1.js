@@ -143,7 +143,7 @@ function draw() {
     noStroke();
     fill(4, 55, 112, opacity);
         if(opacity >= 255 * .8) opacity = 255 * .8;
-        else opacity = opacity + (255)/fr;
+        else opacity = opacity + (120)/fr;
     rectMode(CENTER);
     rect(0, 0, vidWidth, height)
   }
