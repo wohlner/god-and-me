@@ -14,7 +14,7 @@ function windowResized() {
 }
 
 function draw(){
-  textSize(height/21);
+  textSize(height/36);
   
   for (let i = 0; i < 21; i++){
     if (frameCount % 22*fr > i*fr && frameCount % 22*fr <= (i+1)*fr) {
