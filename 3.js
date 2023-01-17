@@ -131,12 +131,8 @@ function draw() {
   
   
     
-  
-    
-  
-    
   //fade out blue rectangle
-  if(frameCount < 90){
+  if(frameCount > 2 && frameCount < 90){
     noStroke();
     fill(4, 55, 112, opacity);
         if(opacity <= 0) opacity = 0;
