@@ -3,7 +3,7 @@ This repo houses code for my Internet art piece, _God and me_, which is a work i
 
 I am building _God and me_ with [p5.js](https://p5js.org/).
 
-Thanks,
+Thanks,<br>
 Jen 
 
 [jenwohlner.com](https://jenwohlner.com/)
