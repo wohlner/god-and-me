@@ -132,14 +132,14 @@ function draw() {
   
     
   //fade out blue rectangle
-  if(frameCount > 2 && frameCount < 90){
-    noStroke();
-    fill(4, 55, 112, opacity);
-        if(opacity <= 0) opacity = 0;
-        else opacity = opacity - (120)/fr;
-    rectMode(CENTER);
-    rect(0, 0, vidWidth, height)
-  }
+  //if(frameCount > 2 && frameCount < 90){
+    //noStroke();
+    //fill(4, 55, 112, opacity);
+        //if(opacity <= 0) opacity = 0;
+        //else opacity = opacity - (120)/fr;
+    //rectMode(CENTER);
+    //rect(0, 0, vidWidth, height)
+  //}
  
   
  
