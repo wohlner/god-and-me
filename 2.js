@@ -16,22 +16,18 @@ function draw(){
   textStyle(BOLD);
     
   textAlign(RIGHT, CENTER);
-  text("God loves me", width/2 + textWidth("me")/2,(height/21)*5);
+  text("I am not alone", width/2 + textWidth("and")/2,(height/21)*5);
     
   for (let i=6; i < 13; i++){
       if (frameCount > i-5){
-          text("me", width/2 + textWidth("me")/2,(height/21)*i);
+          textAlign(CENTER, CENTER);
+          text("and", width/2,(height/21)*i);
       }
   } 
   
   if (frameCount >= 9){
       textAlign(LEFT, CENTER);
-      text("and",width/2 - textWidth("and ") - textWidth("me")/2,(height/21)*13);
-  }
-  
-  if (frameCount >= 10){
-      textAlign(LEFT, CENTER);
-      text("we love you too",width/2  - textWidth("me")/2,(height/21)*14);
+      text("and I am trying my best",width/2 - textWidth("and")/2,(height/21)*13);
   }
       
 }

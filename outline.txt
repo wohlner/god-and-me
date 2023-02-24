@@ -1,0 +1,15 @@
+Page	Status	Content
+Index	done	Call and response: God love me; I love myself
+1	done	Video: unfolding vertically
+2	done	Call and response: I am not alone; I am trying my best
+3		??? Rest and time to breathe
+4		Call and response: I cannot know if god is angry at me; Do not be afraid
+5		Video: unfolded vertically; unfolding horizontally
+6		Call and response: REMEMBER, REMEMBER, REMEMBER; God loves me, I love myself, Do not be afraid
+7		Video: unfolded vertically; folding horizontally
+8		Call and response: I love myself; God loves me
+9		??? Rest and time to breathe
+10		Call and response: The worst things in my life have already happened; And I will not die from this
+11	done	Video: folding vertically
+12		Call and response: Bad stuff will definitely happen; Do not be afraid
+13		Rest and reflect now + time countdown

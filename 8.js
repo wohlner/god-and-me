@@ -16,7 +16,5 @@ function draw(){
   textStyle(BOLD);
     
   textAlign(CENTER, CENTER);
-  text("??? TO DO (Rest and time to breath)", width/2,(height/21)*5);
-    
-      
+  text("Call and response: I love myself; God loves me", width/2,(height/21)*5);   
 }

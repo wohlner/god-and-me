@@ -16,7 +16,5 @@ function draw(){
   textStyle(BOLD);
     
   textAlign(CENTER, CENTER);
-  text("??? TO DO (Rest and time to breath)", width/2,(height/21)*5);
-    
-      
+  text("Call and response: Bad stuff will definitely happen; Do not be afraid", width/2,(height/21)*5);   
 }
