@@ -27,7 +27,12 @@ function draw(){
   
   if (frameCount >= 9){
       textAlign(LEFT, CENTER);
-      text("and I am trying my best",width/2 - textWidth("and")/2,(height/21)*13);
+      text("and",width/2 - textWidth("and")/2,(height/21)*13);
+  }
+  
+  if (frameCount >= 10){
+      textAlign(LEFT, CENTER);
+      text("I am trying my best",width/2 - textWidth("and")/2 +textWidth("and "),(height/21)*13);
   }
       
 }

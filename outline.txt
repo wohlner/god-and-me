@@ -2,7 +2,7 @@ Page	Status	Content
 Index	done	Call and response: God love me; I love myself
 1	done	Video: unfolding vertically
 2	done	Call and response: I am not alone; I am trying my best
-3		??? Rest and time to breathe
+3	done	??? Rest and time to breathe
 4		Call and response: I cannot know if god is angry at me; Do not be afraid
 5		Video: unfolded vertically; unfolding horizontally
 6		Call and response: REMEMBER, REMEMBER, REMEMBER; God loves me, I love myself, Do not be afraid
