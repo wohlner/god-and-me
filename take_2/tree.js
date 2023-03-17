@@ -15,7 +15,7 @@ function draw(){
     
   background(255,255,255)
   //sets the unit of measurement for the whole piece
-  if (width > height) {unit = width/20;}
+  if (width > height) {unit = width/30;}
   if (height >= width) {unit = height/40;}
   
   rectMode(CORNER);
