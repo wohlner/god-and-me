@@ -41,8 +41,7 @@ function draw(){
   rect(spacer + 7.75*unit, height/2 +.75*unit, unit, unit)
   rect(spacer + 7.75*unit, height/2 + 2.5*unit, unit, unit)
   rect(spacer + 7.75*unit, height/2 + 4.25*unit, unit, unit)
-  pop();
-
+  
   //RIGHT TREE
   fill(250, 77, 149); //pink house
   rect(width - spacer - unit,height/2 - unit, unit, 2*unit);
@@ -99,5 +98,6 @@ function draw(){
   rect(width - spacer - 7.5*unit, height/2 + unit, unit, .5*unit)  
   rect(width - spacer - 7.5*unit, height/2 + 2.75*unit, unit, .5*unit)  
   rect(width - spacer - 7.5*unit, height/2 + 4.5*unit, unit, .5*unit)
+  pop();
+
 }
-pop;
