@@ -8,7 +8,7 @@ let vertLineWeight = .05
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  background(255,255,255); 
+  //background(255,255,255); 
   capture = createCapture(VIDEO);
   capture.hide();
   imageMode(CENTER);
@@ -17,7 +17,7 @@ function setup() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background(255,255,255); 
+  //background(255,255,255); 
 }
 
 function draw() {
