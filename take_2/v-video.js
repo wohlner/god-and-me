@@ -23,8 +23,8 @@ function windowResized() {
 function draw() {
   background(255,255,255);
   ratio = 7; // video height ratio to screen width
-  vidWidth = (height * capture.width / capture.height)/ratio;
-  vidHeight = height/ratio;
+  vidWidth = (windowHeight * capture.width / capture.height)/ratio;
+  vidHeight = windowHeight/ratio;
     
   //live video capture in center of window 
   image(capture, 0,0, vidWidth, vidHeight);
@@ -150,7 +150,7 @@ function draw() {
         value.push(i);
       }
       push();
-      translate(width/2-vidWidth/2,0);
+      translate(windowWidth/2-vidWidth/2,0);
       line(random(value),0,random(value), mouseY);
       pop();
       
@@ -162,12 +162,12 @@ function draw() {
    stroke(250, 77, 149);
    vertLineWeight += .05;
    strokeWeight(vertLineWeight);
-      for (let j = 21; j < width/2 - vidWidth/2; j+=21) {
+      for (let j = 21; j < windowWidth/2 - vidWidth/2; j+=21) {
         beginShape(LINES);
           vertex(j, 0);
-          vertex(j, height);
-          vertex(width - j, 0);
-          vertex(width - j, height);
+          vertex(j, windowHeight);
+          vertex(windowWidth - j, 0);
+          vertex(windowWidth - j, windowHeight);
         endShape();
       }
   }
