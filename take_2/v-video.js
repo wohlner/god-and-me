@@ -3,7 +3,6 @@ let vidWidth;
 let vidHeight;
 let fr = 30; // the framerate
 let flipVelocity = 1/29; //speed and direction of rotation on x axis
-let opacity = 0; //DO NOT CHANGE. starting opacity of blue vertical rectangle
 let vertLineWeight = .05
 
 function setup() {
