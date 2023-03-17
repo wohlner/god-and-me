@@ -3,7 +3,6 @@ let spacer = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight,WEBGL);
-  textFont("Courier New");
 }
 
 function windowResized() {
