@@ -28,7 +28,7 @@ function draw() {
   let oscillation = tan(frameCount * 0.02) * 500;
 
   push();
-  translate(oscillation, oscillation/5 + 5* 34);
+  translate(oscillation/2, oscillation/10 + 3* 34);
   sphere3D(2, color(255, 249, 194), color(245, 221, 17), -0.005, -0.015);
   pop();
 }
