@@ -20,7 +20,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(255,255,255);
+  background(250,250,250);
   ratio = 7; // video height ratio to screen width
   vidWidth = (windowHeight * capture.width / capture.height)/ratio;
   vidHeight = windowHeight/ratio;
