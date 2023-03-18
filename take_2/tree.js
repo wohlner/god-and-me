@@ -17,6 +17,39 @@ function draw(){
   if (windowWidth > windowHeight) {unit = windowWidth/30;}
   if (windowHeight >= windowWidth) {unit = windowHeight/40;}
   
+  function sphere3D(mult, strokeColor, fillColor, x, z) {
+    fill(fillColor)
+    //small box
+    stroke(strokeColor); 
+    rotateX(frameCount * x);
+    rotateZ(frameCount * z);
+    sphere(mult*unit)
+  }
+  
+  //central sphere
+  push();
+  translate(windowWidth/2, windowHeight/2, 0);
+  sphere3D(2, color(213, 245, 221), color(50, 168, 82), 0.005, 0.015);
+  pop();
+  
+  //top green cube location
+  push();
+  translate(spacer + 5*unit, windowHeight/2 - 3*unit, 0);
+  sphere3D(.7, color(50, 168, 82), color(213, 245, 221), 0.005, -0.015);
+  pop();
+  
+  //bottom green cube location
+  push();
+  translate(spacer + 5*unit, windowHeight/2 +1.25*unit, 0);
+  sphere3D(.7, color(50, 168, 82), color(213, 245, 221), -0.005, 0.015);
+  pop();
+  
+  //pink cube location
+  push();
+  translate(windowWidth - spacer - 8.25*unit, windowHeight/2 - 1.25*unit, 0);
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, -0.015);  
+  pop();
+  
   rectMode(CORNER);
   noStroke();
 

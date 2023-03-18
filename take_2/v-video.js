@@ -161,7 +161,7 @@ function draw() {
    stroke(250, 77, 149);
    vertLineWeight += .05;
    strokeWeight(vertLineWeight);
-      for (let j = 21; j < windowWidth/2 - vidWidth/2; j+=21) {
+      for (let j = 0; j < windowWidth/2 - vidWidth/2; j+=21) {
         beginShape(LINES);
           vertex(j, 0);
           vertex(j, windowHeight);

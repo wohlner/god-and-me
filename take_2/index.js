@@ -20,7 +20,7 @@ function draw(){
   function cube(cubeColor, x, y) {
     noFill();
     //small box
-    stroke(cubeColor); //pink
+    stroke(cubeColor); 
     rotateX(frameCount * x);
     rotateY(frameCount * y);
     box(.9*unit,.9*unit,.9*unit);
