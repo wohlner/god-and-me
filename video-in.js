@@ -3,25 +3,23 @@ let vidWidth;
 let vidHeight;
 let fr = 30; // the framerate
 let flipVelocity = 1/29; //speed and direction of rotation on x axis
-let opacity = 255 * .8; //DO NOT CHANGE. starting opacity of blue vertical rectangle
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  textFont("Courier New");
   capture = createCapture(VIDEO);
   capture.hide();
-  background(255, 246, 230);
+  background(50, 168, 82);
   imageMode(CENTER);
   frameRate(fr);
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background(255, 246, 230); 
+  background(50, 168, 82); 
 }
 
 function draw() {
-  background(255, 246, 230);
+  background(50, 168, 82);
   ratio = 7; // video height ratio to screen width
   vidWidth = (height * capture.width / capture.height)/ratio;
   vidHeight = height/ratio;
@@ -129,19 +127,8 @@ function draw() {
   image(capture, 0,0, vidWidth, vidHeight);
   pop();
   
-  
-    
-  //fade out blue rectangle
-  //if(frameCount > 2 && frameCount < 90){
-    //noStroke();
-    //fill(4, 55, 112, opacity);
-        //if(opacity <= 0) opacity = 0;
-        //else opacity = opacity - (120)/fr;
-    //rectMode(CENTER);
-    //rect(0, 0, vidWidth, height)
-  //}
- 
-  
- 
+  if (frameCount >= 360){
+    image(capture, 0,0, 3* windowWidth, 3 * (windowWidth * vidHeight)/vidWidth);  
+  }
   
 }
