@@ -12,26 +12,10 @@ function windowResized() {
 function draw(){
   translate(-windowWidth/2, -windowHeight/2, 0); //remove if not using WEBGL renderer 
     
-  background(235,235,235)
+  background(255,255,255)
   //sets the unit of measurement for the whole piece
   if (windowWidth > windowHeight) {unit = windowWidth/30;}
   if (windowHeight >= windowWidth) {unit = windowHeight/40;}
-  
-  function cube(cubeColor, x, y) {
-    noFill();
-    //small box
-    stroke(cubeColor); 
-    rotateX(frameCount * x);
-    rotateY(frameCount * y);
-    box(.9*unit,.9*unit,.9*unit);
-  }
-  
-  //top green cube
-  push();
-  translate(spacer + 5*unit, windowHeight/2 - 3*unit, 0);
-  cube(color(50, 168, 82), 0.015, 0.015);
-  pop();
-  
     
   function sphere3D(mult, strokeColor, fillColor, x, z) {
     fill(fillColor)
@@ -42,16 +26,22 @@ function draw(){
     sphere(mult*unit)
   }
     
+  //top green cube location
+  push();
+  translate(spacer + 5*unit, windowHeight/2 - 3*unit, 0);
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), 0.005, 0.015);
+  pop();
+    
   //bottom green cube location
   push();
   translate(spacer + 5*unit, windowHeight/2 +1.25*unit, 0);
-  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, -0.015);
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), 0.005, -0.015);
   pop();
   
   //pink cube location
   push();
   translate(windowWidth - spacer - 8.25*unit, windowHeight/2 - 1.25*unit, 0);
-  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, -0.015);  
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, 0.015);  
   pop();
   
   rectMode(CORNER);
@@ -59,7 +49,7 @@ function draw(){
 
   push();
   //LEFT TREE
-  fill(50, 168, 82); //green house
+  fill(245, 221, 17); //green house
   rect(spacer,windowHeight/2 - unit, unit, 2*unit);
   rect(spacer + unit, windowHeight/2 - unit, 1.5*unit, .5*unit)
   rect(spacer + unit, windowHeight/2 + unit/2, 1.5*unit, .5*unit)
@@ -79,7 +69,7 @@ function draw(){
   rect(spacer + 7.75*unit, windowHeight/2 + 4.25*unit, unit, unit)
   
   //RIGHT TREE
-  fill(250, 77, 149); //pink house
+  fill(245, 221, 17); //pink house
   rect(windowWidth - spacer - unit,windowHeight/2 - unit, unit, 2*unit);
   rect(windowWidth - spacer - 2.5*unit, windowHeight/2 - unit, 1.5*unit, .5*unit)
   rect(windowWidth - spacer - 2.5*unit, windowHeight/2 + unit/2, 1.5*unit, .5*unit)

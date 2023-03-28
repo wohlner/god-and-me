@@ -25,7 +25,7 @@ function draw() {
   }
   
   function sphere3DAnimation() {
-  let oscillation = tan(frameCount * 0.02) * 500;
+  let oscillation = tan(frameCount * 0.02) * mouseX/2;
 
   push();
   translate(oscillation/2, oscillation/10 + 3* 34);

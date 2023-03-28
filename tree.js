@@ -12,7 +12,7 @@ function windowResized() {
 function draw(){
   translate(-windowWidth/2, -windowHeight/2, 0); //remove if not using WEBGL renderer 
     
-  background(245,245,245)
+  background(255,255,255)
   //sets the unit of measurement for the whole piece
   if (windowWidth > windowHeight) {unit = windowWidth/30;}
   if (windowHeight >= windowWidth) {unit = windowHeight/40;}
@@ -47,16 +47,11 @@ function draw(){
     sphere(mult*unit)
   }
   
-  //central sphere
- // push();
- // translate(windowWidth/2, windowHeight/2, 0);
- // sphere3D(2, color(255, 249, 194),color(245, 221, 17), 0.005, 0.015);
- // pop();
   
   //pink cube location
   push();
   translate(windowWidth - spacer - 8.25*unit, windowHeight/2 - 1.25*unit, 0);
-  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, -0.015);  
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, 0.015);  
   pop();
   
   rectMode(CORNER);

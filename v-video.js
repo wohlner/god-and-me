@@ -3,28 +3,27 @@ let vidWidth;
 let vidHeight;
 let fr = 30; // the framerate
 let flipVelocity = 1/29; //speed and direction of rotation on x axis
-let opacity = 0; //DO NOT CHANGE. starting opacity of blue vertical rectangle
+let vertLineWeight = .05
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-  textFont("Courier New");
+  //background(255,255,255); 
   capture = createCapture(VIDEO);
   capture.hide();
-  background(255, 246, 230);
   imageMode(CENTER);
   frameRate(fr);
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background(255, 246, 230); 
+  //background(255,255,255); 
 }
 
 function draw() {
-  background(255, 246, 230);
+  background(255,255,255);
   ratio = 7; // video height ratio to screen width
-  vidWidth = (height * capture.width / capture.height)/ratio;
-  vidHeight = height/ratio;
+  vidWidth = (windowHeight * capture.width / capture.height)/ratio;
+  vidHeight = windowHeight/ratio;
     
   //live video capture in center of window 
   image(capture, 0,0, vidWidth, vidHeight);
@@ -138,13 +137,41 @@ function draw() {
     pop();
   }
   
-  //fade in blue rectangle
+  beginLayer();
+    background(0,0,0,0);
+    
+    //draw vertical lines over videos from y = 0 to mouseY position
+    if(frameCount > 300 && frameCount%10 == 0 ){
+      stroke(250, 77, 149);
+      strokeWeight(3);
+      let value = [];   
+      for (let i = 0; i < vidWidth+1; i++) {
+        value.push(i);
+      }
+      push();
+      translate(windowWidth/2-vidWidth/2,0);
+      line(random(value),0,random(value), mouseY);
+      pop();
+      
+      
+    }
+  
+  // draw ever expanding pink lines to the left and right of the videos
   if(frameCount > 270){
-    noStroke();
-    fill(4, 55, 112, opacity);
-        if(opacity >= 255 * .8) opacity = 255 * .8;
-        else opacity = opacity + (120)/fr;
-    rectMode(CENTER);
-    rect(0, 0, vidWidth, height)
+   stroke(250, 77, 149);
+   vertLineWeight += .05;
+   strokeWeight(vertLineWeight);
+      for (let j = 0; j < windowWidth/2 - vidWidth/2; j+=21) {
+        beginShape(LINES);
+          vertex(j, 0);
+          vertex(j, windowHeight);
+          vertex(windowWidth - j, 0);
+          vertex(windowWidth - j, windowHeight);
+        endShape();
+      }
   }
+  
+  endLayer(); 
 }
+ 
+

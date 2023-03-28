@@ -32,16 +32,26 @@ function draw(){
   cube(color(50, 168, 82), 0.015, 0.015);
   pop();
   
-  //bottom green cube
+    
+  function sphere3D(mult, strokeColor, fillColor, x, z) {
+    fill(fillColor)
+    //small box
+    stroke(strokeColor); 
+    rotateX(frameCount * x);
+    rotateZ(frameCount * z);
+    sphere(mult*unit)
+  }
+    
+  //bottom green cube location
   push();
   translate(spacer + 5*unit, windowHeight/2 +1.25*unit, 0);
-  cube(color(50, 168, 82), 0.015, -0.015);
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), 0.005, -0.015);
   pop();
   
-  //pink cube
+  //pink cube location
   push();
   translate(windowWidth - spacer - 8.25*unit, windowHeight/2 - 1.25*unit, 0);
-  cube(color(250, 77, 149), -0.015, 0.015);
+  sphere3D(.7,color(245, 221, 17),color(255, 249, 194), -0.005, 0.015);  
   pop();
   
   rectMode(CORNER);
@@ -54,36 +64,34 @@ function draw(){
   rect(spacer + unit, windowHeight/2 - unit, 1.5*unit, .5*unit)
   rect(spacer + unit, windowHeight/2 + unit/2, 1.5*unit, .5*unit)
   
-  //outer column black squares
-  fill(28, 28, 28);
+  //outer column green squares
   //rect(spacer + 4.5*unit, windowHeight/2 - 3.5*unit, unit, unit)
   rect(spacer + 4.5*unit, windowHeight/2 - 1.75*unit, unit, unit)
   //rect(spacer + 4.5*unit, windowHeight/2 +.75*unit, unit, unit)
   rect(spacer + 4.5*unit, windowHeight/2 + 2.5*unit, unit, unit)
   rect(spacer + 4.5*unit, windowHeight/2 + 4.25*unit, unit, unit)
   
-  //inner column black squares
+  //inner column green squares
   rect(spacer + 7.75*unit, windowHeight/2 - 3.5*unit, unit, unit)
   rect(spacer + 7.75*unit, windowHeight/2 - 1.75*unit, unit, unit)
   rect(spacer + 7.75*unit, windowHeight/2 +.75*unit, unit, unit)
   rect(spacer + 7.75*unit, windowHeight/2 + 2.5*unit, unit, unit)
   rect(spacer + 7.75*unit, windowHeight/2 + 4.25*unit, unit, unit)
-
+  
   //RIGHT TREE
-  fill(250, 77, 149); //pink house
+  fill(245, 221, 17);//pink house
   rect(windowWidth - spacer - unit,windowHeight/2 - unit, unit, 2*unit);
   rect(windowWidth - spacer - 2.5*unit, windowHeight/2 - unit, 1.5*unit, .5*unit)
   rect(windowWidth - spacer - 2.5*unit, windowHeight/2 + unit/2, 1.5*unit, .5*unit)
   
-  //outer column black squares
-  fill(28, 28, 28);
+  //outer column pink squares
   rect(windowWidth - spacer - 5.5*unit, windowHeight/2 - 3.5*unit, unit, unit)
   rect(windowWidth - spacer - 5.5*unit, windowHeight/2 - 1.75*unit, unit, unit)
   rect(windowWidth - spacer - 5.5*unit, windowHeight/2 +.75*unit, unit, unit)
   rect(windowWidth - spacer - 5.5*unit, windowHeight/2 + 2.5*unit, unit, unit)
   rect(windowWidth - spacer - 5.5*unit, windowHeight/2 + 4.25*unit, unit, unit)
   
-  //inner column black squares
+  //inner column pink squares
   rect(windowWidth - spacer - 8.75*unit, windowHeight/2 - 3.5*unit, unit, unit)
   //rect(windowWidth - spacer - 8.75*unit, windowHeight/2 - 1.75*unit, unit, unit)
   rect(windowWidth - spacer - 8.75*unit, windowHeight/2 +.75*unit, unit, unit)
@@ -127,4 +135,5 @@ function draw(){
   rect(windowWidth - spacer - 7.5*unit, windowHeight/2 + 2.75*unit, unit, .5*unit)  
   rect(windowWidth - spacer - 7.5*unit, windowHeight/2 + 4.5*unit, unit, .5*unit)
   pop();
+
 }
